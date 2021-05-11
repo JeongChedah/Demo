@@ -1,0 +1,26 @@
+  [
+    {
+      "productId": 1,
+      "productName": "STAN SMITH",
+      "productType": "Men/Women",
+      "productPrice": 3200.0,
+      "productSize": "35.5-44",
+      "productDate": "2020-08-13",
+      "productDescription": "Trying to decide between sporty casual and dressed-up glam? Why not do both? These adidas Stan Smith shoes have the same buttery-soft leather upper as the 1971 original, dressed up with sparkling crystals from Swarovski.",
+      "productImg": "Stansmith.png",
+      "brands": {
+          "brandId": 1,
+          "brandName": "Adidas"
+      },
+      "colors": [
+        {
+          "colorid": 4,
+          "colorName": "#70E000" 
+        },
+        {
+          "colorId": 1,
+          "colorName": "#000000"
+        }
+      ]
+    }
+  ]
