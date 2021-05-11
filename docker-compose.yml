@@ -1,37 +1,37 @@
 version: '3'
 services:
-    database:
+    db:
         build: ./database
         restart: always
-        container_name: database
+        container_name: db
         volumes:
             - ./database/scrip/:/docker-entrypoint-initdb.d
             - ./database/scrip/mysql-data:/var/lib/mysql
-    backend:
+    be:
         build: ./backend
         restart: always
-        container_name: backend
+        container_name: be
         volumes: 
             - ./backend/public/images:/public/images
         depends_on: 
-            - database
-    frontend:
+            - db
+    fe:
         build: ./frontend
         restart: always
-        container_name: frontend
+        container_name: fe
         depends_on: 
-            - database
-            - backend
-    reverseproxy:
+            - db
+            - be
+    proxy:
         image: nginx
         restart: always
-        container_name: reverseproxy
+        container_name: proxy
         volumes: 
             - ./reverseproxy/nginx.conf:/etc/nginx/conf.d/default.conf
         depends_on: 
-            - database
-            - backend
-            - frontend
+            - db
+            - be
+            - fe
         ports:
             - "80:80"
 
