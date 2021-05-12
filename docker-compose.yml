@@ -4,10 +4,6 @@ services:
         build: ./database
         restart: always
         container_name: database
-        environment: 
-           -MYSQL_USER: ${MYSQL_USER}
-           -MYSQL_DATABASE: ${MYSQL_DATABASE}
-           -MYSQL_PASSWORD: ${MYSQL_PASSWORD}
         volumes:
             - ./database/scrip/:/docker-entrypoint-initdb.d
             - ./database/scrip/mysql-data:/var/lib/mysql
