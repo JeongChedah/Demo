@@ -97,7 +97,7 @@ export default {
     },
     getProductImage(productImg){
       // return "http://localhost:9000/image/"+productImg;
-      return "http://40.65.142.182/backend/image/"+productImg;
+      return "http://52.187.146.93/backend/image/"+productImg;
     },
     refreshList() {
       this.retrieveProduct();
